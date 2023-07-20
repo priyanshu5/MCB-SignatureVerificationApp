@@ -1,11 +1,74 @@
 .top-strip {
-    background-color: #f8f9fa;
-    height: 50px;
-  }
-  
-  .logout-button {
-    position: absolute;
-    top: 10px;
-    right: 40px;
-  }
-  
+  background-color: #f8f9fa;
+  height: 50px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #f8f9fa;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+ 
+
+#sidebar .sidebar-header {
+  text-align: center;
+}
+
+ 
+
+#sidebar ul.components {
+  padding: 0;
+}
+
+ 
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+ 
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+ 
+
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+
+ 
+
+/* Add a custom style for the active item */
+#sidebar .list-unstyled li.active {
+  color: #ffffff;
+  background-color: #007bff;
+}
+
+ 
+
+#sidebar .list-unstyled li.active a {
+  color: #ffffff;
+  background-color: #007bff;
+}
+/* #sidebar-header{
+  margin-bottom: 3px;
+} */

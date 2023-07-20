@@ -1,29 +1,48 @@
 <div class="top-strip"></div>
-<!-- <p>this is nav side bar</p> -->
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="navbar-nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/navsidebar/home" >IFT - Signature Verification</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/navsidebar/signature-verification-data">IFT Signature Verification Data</a>
-          </li>
-          
-        </ul>
-      </nav>
-    </div>
-    <div class="col-md-9">
-        <router-outlet></router-outlet>
+  <div class="col-md-3">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h4>Signature Verification</h4>
+      </div>
+      <ul class="list-unstyled components">
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="/navsidebar/home" >IFT - Signature Verification</a>
+        </li>
+        <li routerLinkActive="active">
+          <a class="nav-link" routerLink="/navsidebar/signature-verification-data" >IFT Signature Verification Data</a>
+        </li>
         
-    </div>
+        
+      </ul>
+    </nav>
   </div>
-  
-</div>
-<div class="logout-button">
+  <div class="col-md-9">
+  <!-- Main content goes here -->
+  <router-outlet></router-outlet>
+  </div>
+  </div>
+  </div>
+  <div class="logout-button">
     <button class="btn btn-primary" (click)="logout()">Logout</button>
   </div>
 
 
+<!-- 
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>My Sidebar</h3>
+    </div>
+    <ul class="list-unstyled components">
+      <li routerLinkActive="active">
+        <a routerLink="/">Home</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/about">About</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav> -->

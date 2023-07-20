@@ -15,5 +15,12 @@ export class NavsidebarComponent {
       console.log("logout")
       this.router.navigate(["/login"])
     }
+    isMenuActive(route: string): boolean {
+      // Get the current activated route's URL
+      const currentRoute = this.router.url;
+  
+      // Check if the current route starts with the specified menu item route
+      return currentRoute.startsWith(route);
+    }
 
 }
