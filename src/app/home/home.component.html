@@ -1,0 +1,41 @@
+<!-- Replace the existing table code with the updated code -->
+<div>
+    <button (click)="assignToUser()">Assign Selected</button>
+    <button (click)="viewSelectedRows()">View Only</button>
+  </div>
+<p></p>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th></th> <!-- Empty column for checkboxes -->
+        
+        <th>Bussiness key</th>
+        <th>Transaction Currency</th>
+        <th>Transaction Amount</th>
+        <th>Debit Account Number</th>
+        <th>Account Short Name</th>
+        <th>Created On</th>
+        <th>Priority</th>
+        <th>Source BU</th>
+        <th>Document Capture Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let source of eventSources" (click)="navigateToRowDetails(source)">
+        <td>
+          <input type="checkbox" [(ngModel)]="source.selected" (click)="$event.stopPropagation()" />
+        </td>
+        <td>{{ source.businessKey }}</td>
+        <td>{{ source.transactionCurrency }}</td>
+        <td>{{ source.transactionAmount }}</td>
+        <td>{{ source.debitAccountNumber }}</td>
+        <td>{{ source.accountShortName }}</td>
+        <td>{{ source.createdOn | date }}</td>
+        <td>{{ source.priority }}</td>
+        <td>{{ source.sourceBu }}</td>
+        <td>{{ source.documentCaptureReference }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  

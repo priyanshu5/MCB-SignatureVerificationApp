@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="card col-sm-8">
+            <div class="card-header">
+                IFT - Signature Verification Data
+            </div>
+            <div class="card-body">
+                <div class="container mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col-9">Label</th>
+                                <th class="col-3">Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Not yet verified</td>
+                                <td>{{signatureData.notVerifiedCount}}</td>
+                            </tr>
+                            <tr>
+                                <td>Signature Ok</td>
+                                <td>{{signatureData.okCount}}</td>
+                            </tr>
+                            <tr>
+                                <td>Signature not Ok</td>
+                                <td>{{signatureData.notOkCount}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

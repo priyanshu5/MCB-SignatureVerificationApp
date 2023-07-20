@@ -1,0 +1,8 @@
+/* Additional styles for centering the card and button */
+.card {
+  margin-top: 100px; /* Adjust the value to change the vertical position of the card */
+}
+
+.text-center {
+  margin-top: 20px; /* Adjust the value to change the space between the form and the button */
+}
